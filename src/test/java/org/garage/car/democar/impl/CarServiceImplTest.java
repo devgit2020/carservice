@@ -1,5 +1,6 @@
 package org.garage.car.democar.impl;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import org.garage.car.democar.repository.CarRepository;
 import org.garage.car.democar.service.CarService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -20,8 +22,9 @@ public class CarServiceImplTest {
 	@Mock
 	CarRepository carRepository;
 
-	@Mock
-	CarService carServiceImpl;
+	@InjectMocks
+	CarServiceImpl carServiceImpl;
+	
 	
 	@Test
 	public void test() {
@@ -45,16 +48,18 @@ public class CarServiceImplTest {
 		Mockito.lenient().when(carRepository.findByChassisNumber(Mockito.anyString())).thenReturn(TestDataService.getCarWithMatchingChassis());
 	
 		Car response = carServiceImpl.getCar("111456");
-		//assertNotNull(response);   							// This need to fix need little tim
-		//assertEquals("111456", response.getChassisNumber());
+		assertNotNull(response);   							
+		assertEquals("111456", response.getChassisNumber());
 	}
+	
 
-	@Test
+	/*@Test
 	public void testSaveCar() {
-		Mockito.lenient().doNothing().when(carServiceImpl).saveCar(Mockito.any());
+		Mockito.lenient().doNothing().when(carService).saveCar(Mockito.any());
 		Car car = new Car();
-		carServiceImpl.saveCar(car);
+		carService.saveCar(car);
 
-	}
+	}*/
 
+	
 }
