@@ -1,4 +1,4 @@
-package org.test.car.democar.config;
+package org.garage.car.democar.config;
 
 import java.util.Properties;
 
@@ -48,7 +48,7 @@ public class JpaConfiguration {
 		
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendorAdapter);
-		factory.setPackagesToScan("org.test.car.democar.*");
+		factory.setPackagesToScan("org.garage.car.democar.*");
 		factory.setDataSource(dataSource());
 		factory.setJpaProperties(hibernateProperties);
 		factory.afterPropertiesSet();

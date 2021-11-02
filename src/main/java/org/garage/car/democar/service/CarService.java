@@ -1,13 +1,13 @@
-package org.test.car.democar.service;
+package org.garage.car.democar.service;
 
 import java.util.List;
 
-import org.test.car.democar.model.Car;
+import org.garage.car.democar.model.Car;
 
 
  
 /**
- * @author JavaSolutionsGuide
+ * @author Santosh Behera
  *
  */
 public interface CarService {

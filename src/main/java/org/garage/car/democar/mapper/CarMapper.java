@@ -1,9 +1,9 @@
-package org.test.car.democar.mapper;
+package org.garage.car.democar.mapper;
 
+import org.garage.car.democar.entity.CarEntity;
+import org.garage.car.democar.model.Car;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import org.test.car.democar.entity.CarEntity;
-import org.test.car.democar.model.Car;
 
 @Mapper(componentModel = "spring")
 public interface CarMapper {

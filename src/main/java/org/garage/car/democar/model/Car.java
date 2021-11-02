@@ -1,43 +1,28 @@
-package org.test.car.democar.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package org.garage.car.democar.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * @author JavaSolutionsGuide
- *
- */
-@Getter
-@Setter
-@Entity
-@Table(name="car")
-public class CarEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Car {
+
+    
 	private Long id;
-
-	private String brand;
+	
+    private String brand;
 
 	private String model;
 
 	private Integer year_model;
 
-	@Column(name="chassi_number")
 	private String chassisNumber;
-
+	
 	private Double buyind_price;
 
 	private Double selling_price;
 	
 	private String date_added;
+	
 
 	public String getBrand() {
 		return brand;
@@ -63,6 +48,13 @@ public class CarEntity {
 		this.year_model = year_model;
 	}
 
+	public String getChassisNumber() {
+		return chassisNumber;
+	}
+
+	public void setChassisNumber(String chassisNumber) {
+		this.chassisNumber = chassisNumber;
+	}
 
 	public Double getBuyind_price() {
 		return buyind_price;
@@ -88,15 +80,6 @@ public class CarEntity {
 		this.date_added = date_added;
 	}
 
-	public String getChassisNumber() {
-		return chassisNumber;
-	}
-
-	public void setChassisNumber(String chassisNumber) {
-		this.chassisNumber = chassisNumber;
-	}
-
-
-
 	
+
 }

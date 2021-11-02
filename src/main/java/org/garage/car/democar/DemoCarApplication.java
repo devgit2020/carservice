@@ -1,4 +1,4 @@
-package org.test.car.democar;
+package org.garage.car.democar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

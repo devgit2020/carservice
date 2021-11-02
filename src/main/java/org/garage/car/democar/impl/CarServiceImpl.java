@@ -1,18 +1,18 @@
-package org.test.car.democar.impl;
+package org.garage.car.democar.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.garage.car.democar.entity.CarEntity;
+import org.garage.car.democar.model.Car;
+import org.garage.car.democar.repository.CarRepository;
+import org.garage.car.democar.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.test.car.democar.entity.CarEntity;
-import org.test.car.democar.model.Car;
-import org.test.car.democar.repository.CarRepository;
-import org.test.car.democar.service.CarService;
 
 /**
- * @author JavaSolutionsGuide
+ * @author Santosh Behera
  *
  */
 @Service
@@ -52,7 +52,7 @@ public class CarServiceImpl implements CarService {
 
 	public Car getCar(String chassisNumber) {
 
-		Optional<CarEntity> carOptional = carRepository.findBychassisNumber(chassisNumber);
+		Optional<CarEntity> carOptional = carRepository.findByChassisNumber(chassisNumber);
 		Car carModel = new Car();
 		
 
