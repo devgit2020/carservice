@@ -14,7 +14,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.test.car.democar.impl.TestDataService;
+import org.garage.car.democar.impl.TestDataService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CarRestControllerTest {
@@ -35,10 +35,7 @@ public class CarRestControllerTest {
 		
 	}
 	
-	@BeforeEach
-	public void init() {
-		MockitoAnnotations.openMocks(this);
-	}
+	
 	
 	@Test
 	public void testGetCars() {

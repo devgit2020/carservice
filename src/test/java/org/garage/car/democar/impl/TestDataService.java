@@ -1,4 +1,4 @@
-package org.test.car.democar.impl;
+package org.garage.car.democar.impl;
 
 import java.util.ArrayList;
 import java.util.List;
